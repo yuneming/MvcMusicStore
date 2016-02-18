@@ -1,0 +1,32 @@
+﻿@using System
+@model MvcMusicStore.Models.Album
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Album</legend>
+
+    <div class="display-label">GenreId</div>
+    <div class="display-field">@Model.GenreId</div>
+
+    <div class="display-label">ArtistId</div>
+    <div class="display-field">@Model.ArtistId</div>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">@Model.Title</div>
+
+    <div class="display-label">Price</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Price)</div>
+
+    <div class="display-label">AlbumArtUrl</div>
+    <div class="display-field">@Model.AlbumArtUrl</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AlbumId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
